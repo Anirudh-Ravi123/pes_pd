@@ -128,4 +128,4 @@ PDK contains
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/c7d898ed-afac-48b4-a059-f1f61a6a4ab3)
 
-- Signoff: The "Signoff" stage encompasses a series of verification and validation steps
+- Signoff: The Signoff stage encompasses a series of verification and validation steps
