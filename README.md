@@ -223,4 +223,12 @@ Synthesized
 
 Flop ratio = 1613/14876 = 0.108
 
-10.8% 
+10.8% of the cells in our design are flip flops
+
+Netlist is generated in the runs folder 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/aebfb15a-047a-409c-838e-72b2d0ea4a1b)
+
+
+
+# DAY 2
