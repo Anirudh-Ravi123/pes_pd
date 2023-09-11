@@ -188,9 +188,39 @@ Now when we  type the ```docker``` command a shell opens .
 In the shell we type ```./flow.tcl -interactive```
 
 
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/a6129d96-95c1-48bf-aa4b-f11f1d1b911b)
 
 
+Then we type ```package require openlane 0.9``` to import all the packages 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/84eeda59-504b-406f-b97a-e7afec32e34e)
 
 
+Now for the design setup stage, we will be working on picorv32a design.
+
+```
+prep -design picorv32a
+```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9c6e9c0a-cbcd-472e-af24-a666bfb78444)
+
+After preparing the design, we can see that a new 'runs' folder is created.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/ab072ac0-842b-4391-82cf-bf8ff7c8014d)
 
 
+Now we synthesis the design
+```
+run_synthesis
+```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/ed9950fb-d0c8-4704-bb09-9ab5025ecf78)
+
+Synthesized 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/6b1fc802-218d-4b66-b152-6ea447aa03df)
+
+
+Flop ratio = 1613/14876 = 0.108
+
+10.8% 
