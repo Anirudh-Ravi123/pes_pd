@@ -129,3 +129,68 @@ PDK contains
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/c7d898ed-afac-48b4-a059-f1f61a6a4ab3)
 
 - Signoff: The Signoff stage encompasses a series of verification and validation steps
+
+
+**Introduction to OpenLANE and Strive chipsets**
+
+OpenLane
+OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework.esigned to automate the process of designing and fabricating digital integrated circuits. OpenLane aims to make custom ASIC design more accessible to a broader range of engineers and researchers.
+
+
+striVe is a family of open souces tools like open PDK, open EDA ,open RTL.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/97399b2b-2408-4fa0-b2d8-81b7967854d7)
+
+
+
+**OpenLANE ASIC  flow**
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/ba36bb0a-b15f-4e2e-ab8a-c8f923da64ee)
+
+
+- Synthesis exploration is a process in digital integrated circuit  design where designers explore various design options and configurations during the synthesis stage. The goal is to find the best combination of logic optimizations, architecture choices, and design constraints to meet the desired performance, power consumption, and area targets for the design. 
+
+- Design exploration refers to the process of investigating and evaluating various design alternatives, configurations, and choices to optimize a system or product's performance, functionality, cost, or other key attributes.
+
+- Regression testing uses design exploration utility on approximately 70 designs and compares the results with the best known ones.
+
+  ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/4d0445ba-0390-498a-9c7a-4bfbc10c70ca)
+
+- Design for Test (DFT) is a set of engineering techniques and practices employed during the design of integrated circuits and electronic systems to facilitate and improve the testing and verification process. The main objective of DFT is to make it easier to detect and diagnose faults, defects, or issues within the IC or system.
+
+- Physical implementation  refers to the process of transforming a high-level logical description of an IC into a physical layout that can be fabricated. Process involves Floorplanning, Placement, Clock Tree Synthesis, Routing etc
+
+- Logic Equivalence Check  done by using yosys. Every time the netlist is modified ,verification must be performed. CTS modifies the netlist, post placement optimizations modifies the netlist
+
+- Antenna Rules ViolationsWhen ametal wire segment is fabricated ,it can act as an antenna. Reactive ion etching causes charges to accumulate on the wire due to which transistor gates are damaged during fabrication. Solutions are bridging attaches a higher layer intermediary or adding  antenna diode cell to leak away charges
+
+- Static Timing Analysis RC Extraction : DEF2SPEF and 
+- Static Timing Analysis RC Extraction : DEF2SPEF and
+
+
+**Getting Familiar with the Open Source EDA Tools**
+
+Tool we will be  working on pdk variant called sky130_fd_sc_hd
+
+- sky130 : is the process name
+- fd : skywater foundary
+- sc : standard cell
+- hd(high density) : variant of pdk
+
+**Design Preperation step**
+First we go the the working directory 
+```
+cd Desktop/work/tools/
+cd openlane_working_dir/
+cd openlane
+```
+Now when we  type the ```docker``` command a shell opens .
+In the shell we type ```./flow.tcl -interactive```
+
+
+
+
+
+
+
+
