@@ -231,4 +231,32 @@ Netlist is generated in the runs folder
 
 
 
-# DAY 2
+
+##  DAY 2 - Good floorplan vs bad floorplan and introduction to library cells
+
+**Chip Floor planning considerations**
+
+-  Define Width and height of core and die:
+  The die refers to the entire semiconductor chip, including the core, I/O pads, and any additional features.The core refers to the central area of the chip where most of the active circuitry resides. It includes components like the CPU, GPU, memory, and other logic.
+
+Utilisation factor plays an important role in floor planning
+It is given by 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/fde5cfbf-b49c-4ca8-9c84-204d9095d32c)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/547d08b1-287c-41ea-8fa3-fe01d4c48dc2)
+
+
+- Define Location of Pre-Placed cells
+
+Pre-Placed Cells are specific blocks or cells like memories, clock gating cells, comparator, mux etc within an integrated circuit layout that are manually placed by the chip designer in predetermined locations before the automated placement and routing tools are used to complete the rest of the design.
+
+- De-coupling capacitors
+  
+In large circuits with many resistors there are time when the capacitor may not get charged fully due to voltage drops. The solution for this is to use de-  coupling capacitors. Decoupling capacitors store and discharge electrical energy quickly or decoupling capacitors absorb excess charge to filter out high- 
+frequency noise and transient voltage fluctuations.
+
+
+
+
