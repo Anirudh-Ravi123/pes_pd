@@ -360,4 +360,57 @@ On zooming in we can see the placement of the standard cells
 
 
 
+
+
 **Cell design and characterization flows**
+
+**Inputs for cell design flow**
+
+Cell design flow refers to the process of creating and optimizing individual digital logic cells that are part of a standard cell library. These libraries contain a set of pre-designed, characterized, and reusable logic gates, flip-flops, and other basic building blocks used in the design of integrated circuits.
+These libraries include  PDK, DRC and LVS rules, SPICE models, libraries, user-defined specifications.
+User derfined specifications like Pin location, drawn gate lenght are added to the libarary by the library developer.
+
+**Circuit Design**
+
+ Circuit design:Implment function using nmos and pmos and then derive the network graph. Derive the Euler's path and stick diagram from the graph.
+ 
+**Layout design**
+ Convert stick diagram according to the DRC rules
+Extraction of parasitics,extracted spice list
+
+**Characterization**
+timing ,noise power.libs functions
+Read in the models and tech files and generate extracted spice Netlist. Read the subcircuits and attach power sources. Apply stimulus to characterization setup, provide neccesary output capacitance loads and provide neccesary simulation commands.
+
+
+
+**General timing characterization parameters**
+
+**Timing threshold definitions**
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/10949764-a9f2-4860-9f8c-90d092ea32ef)
+
+
+
+**Propagation Delay**
+The time difference between when the transitional input reaches 50% of its final value and when the output reaches 50% of its final value. 
+
+```
+Propagation delay=time(out_fall_thr)-time(in_rise_thr)
+```
+
+**Transition Time**
+The time it takes the signal to move between states is the transition time , where the time is measured between 10% and 90% or 20% to 80% of the signal levels.
+
+```
+Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
+```
+
+
+```
+Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
+```
+
+
+
+## DAY 3
