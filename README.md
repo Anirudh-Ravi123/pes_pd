@@ -273,13 +273,33 @@ Pin placement is an essential part of floorplanning to minimize buffering and im
 
 
 **Steps to run FLoorplan using OpenLANE**
+First we run the floop plan in openLane using the command ```run_floorplan```
 
 
-First we navigate to the /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-09_17-53/results/floorplan directory 
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/472365f3-63e3-437b-83ed-c5a388076682)
+
+
+Then we navigate to the /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-09_17-53/results/floorplan directory 
 Then we type the command 
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d8cc2ef6-57b3-4e7a-a133-d517a6926a7e)
+
+
+Layout 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/fefa4336-a641-468f-9304-3ee241847ab1)
+
+
+Zoomed in view 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/eeba75c7-b8ca-4718-96fb-1fc3a4710b5b)
+
+
+Standard cells that are used in the design
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/02b5c7da-f5d8-4522-b296-aa7b1882ae36)
+
 
