@@ -252,6 +252,7 @@ It is given by
 
 Pre-Placed Cells are specific blocks or cells like memories, clock gating cells, comparator, mux etc within an integrated circuit layout that are manually placed by the chip designer in predetermined locations before the automated placement and routing tools are used to complete the rest of the design.
 
+
 - De-coupling capacitors
   
 In large circuits with many resistors there are time when the capacitor may not get charged fully due to voltage drops. The solution for this is to use de-  coupling capacitors. Decoupling capacitors store and discharge electrical energy quickly or decoupling capacitors absorb excess charge to filter out high- 
@@ -259,4 +260,26 @@ frequency noise and transient voltage fluctuations.
 
 
 
+- Power Planning
+  
+Power planning during the Floorplanning phase is essential to lower noise in digital circuits attributed to voltage droop and ground bounce.When a transition occurs on a net, charge associated with coupling capacitors may be dumped to ground. If there are not enough ground taps charge will accumulate at the tap and the ground line will act like a large resistor, raising the ground voltage and lowering our noise margin. To bypass this problem a robust PDN with many power strap taps are needed to lower the resistance associated with the PDN.
+
+
+
+- Pin Placement
+
+Pin placement is an essential part of floorplanning to minimize buffering and improve power consumption and timing delays we use the HDL netlist to determine where a specific pin should be placed in the circuit. We join the common pins and try to keep the connections as effecient as possible.
+
+
+
+**Steps to run FLoorplan using OpenLANE**
+
+
+First we navigate to the /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-09_17-53/results/floorplan directory 
+Then we type the command 
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d8cc2ef6-57b3-4e7a-a133-d517a6926a7e)
 
