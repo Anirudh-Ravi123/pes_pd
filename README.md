@@ -303,3 +303,61 @@ Standard cells that are used in the design
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/02b5c7da-f5d8-4522-b296-aa7b1882ae36)
 
 
+
+**Library Binding and Placement**
+
+
+**Netlist binding and initial place design**
+
+Netlist binding is the process of mapping the logical representation of a digital design (typically described in a hardware description language l onto a library of standard cells.
+
+Each component is mapped to a given shape. All these shapes and the working  are defined in the library. Then all these shapes from each stage of the netlist are placed onto the floorplan in a efficient way so that delay is minimal.
+
+**Optimize placement using estimated wire-length and capacitance**
+
+Estimated wire-length and capacitance is a crucial step to ensure that the physical layout of components and interconnections meets performance and power goals. Wire-length estimation and capacitance modeling help guide the placement process, especially when considering factors like signal delay, power consumption, and signal integrity.
+If the wire area is big then the resistance and capacitance huge. To maintain signal inteegrity we route the signal through buffers that replicates and routes the signals.
+
+The integration of wire-length and capacitance estimates into the placement optimization process helps balance performance, power, and area trade-offs in the design. The goal is to achieve a placement that minimizes signal delays, reduces power consumption, maintains signal integrity, and meets all design constraints.
+
+
+**Final placement optimization**
+
+When performing final placement optimization with timing analysis using an ideal clock, you are essentially optimizing the physical placement of components within an integrated circuit while assuming that the clock signal is perfect.. This approach allows you to focus primarily on optimizing the physical layout of the design without considering clock-related timing challenges.
+
+
+
+**Need for libraries and characterization**
+
+Libraries and characterization are foundational elements of the IC design process. Libraries provide standardized building blocks that enhance design productivity and reusability, while characterization provides the essential data needed to accurately model and simulate the behavior of these components, ensuring that the final design meets its performance, power, and reliability goals.
+
+
+**Congestion aware placement using RePlAce**
+
+For global placement we run the ```run_placement``` command 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/2d61b79b-5291-42a8-8702-fa7f3d145376)
+
+
+Here the Half parameter wire lenght and overflow are changed throught the iterations. Our objective is to reduce the overlfow
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/19347f4e-767b-4d5b-890e-bf64cea664ac)
+
+
+then we type the command 
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/eb056a69-65aa-4d9a-bff7-a42104184083)
+
+
+On zooming in we can see the placement of the standard cells
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/f0bc4e14-94f9-4125-986f-3fb12f370c85)
+
+
+
+**Cell design and characterization flows**
