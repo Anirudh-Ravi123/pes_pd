@@ -313,6 +313,12 @@ Netlist binding is the process of mapping the logical representation of a digita
 
 Each component is mapped to a given shape. All these shapes and the working  are defined in the library. Then all these shapes from each stage of the netlist are placed onto the floorplan in a efficient way so that delay is minimal.
 
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/28a1cacd-c02e-4e50-8817-768de9ed30a0)
+
+- The components of the netlist are placed in the core area.
+- They are placed according to the convenience of distance from the pins.
+- When sending signal from FF1 to FF2, according to the circuit requirements, there has to be a very fast propogation of signals. Hence, they are placed very close and buffers are added since there is a small 
+  delay for the signal from the pin to reach FF1. The buffers maintain signal integrity
 **Optimize placement using estimated wire-length and capacitance**
 
 Estimated wire-length and capacitance is a crucial step to ensure that the physical layout of components and interconnections meets performance and power goals. Wire-length estimation and capacitance modeling help guide the placement process, especially when considering factors like signal delay, power consumption, and signal integrity.
@@ -413,4 +419,13 @@ Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 
 
-## DAY 3
+## DAY 3 - Design library cell using Magic Layout and ngspice characterization
+
+**Labs for CMOS inverter ngspice simulations**
+
+IO Placer revision
+PnR is a iterative flow and hence, we can make changes to the environment variables when required.
+For example we can change the  pin configuration along the core from equvi distance randomly placed to someother placement.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/83069431-583f-4228-9bda-cb47b37015ba)
+
