@@ -627,5 +627,50 @@ We can see the error is fixed
 
 
 
+**DRC error as geometrical construct**
 
+Open the nwell.mag file in magic. Seletch the nwell.6 and type the commands
+```
+cif ostyle drc
+cif see dnwell_shrink
+cif see dnwell_missing
+```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5df2c37d-8812-4b99-9354-75df1b87f133)
+
+
+Output 
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/a53fd631-d968-49ba-a1c2-3a839c7b2111)
+
+
+**to find missing or incorrect rules and fix them**
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/3e68f2b7-5a31-4d46-b207-a65629b9c197)
+
+
+ERROR
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5b0b494d-4797-4da7-8340-9355e7f0a0d5)
+
+To fix make the changes 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/0325097c-4ff8-4461-8063-34d274c1cf48)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/8cd1215a-bf4f-4fa6-910b-eaad60d19c20)
+
+
+Now load the sky130A.tech file and type the command ```drc check```  for both normal and drc fast 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/a843d9f6-ead2-45fc-81df-22d46b651bc4)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/2cf31443-e887-4c36-9237-8ba889cab2fd)
+
+
+
+## DAY 4
 
