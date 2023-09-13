@@ -567,3 +567,65 @@ SKY130 is a mature 180nm-130nm hybrid technology developed by Cypress Semiconduc
 
 
 
+Commands to open magic 
+```
+magic -d XR
+```
+
+Then we open the met3.mag file
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e746a4b8-cd4b-442e-8916-2bc8fdce4c9e)
+
+
+
+To check which DRC rule is being violated select area and type drc why in tkcon 
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/be24dcd6-9893-4c5a-b2d1-5b2061b9370c)
+
+
+
+to add contact cuts 
+add met3 contact by selecting area and clicking on m3contact using middle mouse button.
+then type ``` cif see VIA2``` in tkcon prompt
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/075377c5-4aa4-4583-9656-d0e87d5ab95a)
+
+
+
+To fix errors
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/25ecd4e0-a818-478b-bd23-9832bf88d536)
+
+the error is 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/46257981-a308-4be5-b684-ddedb0defc79)
+
+
+
+To fix the error open the sky130A.tech file using a editor and search for poly.9 and make the changes
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/b78688b0-689a-4f18-af77-198c087daf32)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/46d73847-29cc-4171-9746-1bb51090b71c)
+
+
+Now load the sky130A.tech file again and type the command ```drc check```
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5fe12345-e777-4215-9a15-c807b4d7ccae)
+
+
+
+We can see the error is fixed 
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d843fa0a-45f0-45f8-a148-f28fc61f7dee)
+
+
+
+
+
