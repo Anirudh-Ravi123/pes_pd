@@ -525,6 +525,44 @@ SPICE file
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9665e29b-cb88-4aa6-a408-e26a520628f3)
 
 
+**Spice Wrapper for Simulation**
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/0140489c-834e-4ffe-a6e6-6e19b2cf9091)
+
+
+**NGPSICE**
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e9c1c6e3-db9b-4a67-90c0-3130db690dca)
+
+
+Next we type the command 
+```
+plot y vs time a
+```
+
+**WAVEFORM**
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5b1f8fb1-24b1-4ae9-bb40-cd9ceffded75)
+
+
+
+**Introduction to Magic tool options and DRC rules**
+
+(refer:http://opencircuitdesign.com/magic/)
+Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
+
+
+Drc section
+The design rules used by Magic's design rule checker come entirely from the technology file. We'll look first at two simple kinds of rules, width and and spacing. Most of the rules in the drc section are one or the other of these kinds of rules.
+
+
+SKY130 pdk
+SKY130 is a mature 180nm-130nm hybrid technology developed by Cypress Semiconductor that has been used for many production parts. SKY130 is now available as a foundry technology through SkyWater Technology Foundry.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/37b78da5-b313-47a1-ae9d-6d92911cab33)
+
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/04b4381b-b92f-40ed-a403-09c0be903743)
 
 
 
