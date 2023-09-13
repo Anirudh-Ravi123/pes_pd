@@ -429,3 +429,103 @@ For example we can change the  pin configuration along the core from equvi dista
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/83069431-583f-4228-9bda-cb47b37015ba)
 
+
+**SPICE deck creation for CMOS inverter**
+
+
+To simulate standard cells  we  need to  create spice deck for our cell.
+The spice deck will contain
+- Component connectivity which include the substrate taps that  tunes the threshold voltage of the MOS
+- Component values like values of PMOS and NMOS, Output load, Input Gate Voltage, supply voltage
+- Node names which  are required to define the SPICE Netlist
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e70a334f-604f-42ce-81af-986009595de5)
+
+
+**Switching Threshold of a CMOS Inverter**
+CMOS cells have three modes of operation:
+
+Cutoff - No inversion
+Triode - Inversion but no pinchoff in channel
+Saturation - Inversion and pinchoff in channel
+
+The voltages at which the switch between the modes of operation happens is dependent on the threshold voltage of the device. Threshold voltage is a function of the W/L ratio of a device, therefore varying the W/L ratio will vary the output waveform of CMOS devices.
+To enable efficient description of the varying waveforms a single parameter called switching threshold is used. Switching threshold is defined at the intersection of Vin = Vout. 
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/28a7e92a-bbfd-4428-a2c5-748995227b16)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/93ea6940-f72d-4181-8d61-45bb83130fd3)
+
+
+**Inception of Layout of CMOS fabrication process**
+
+**16 mask CMOS process**
+
+- Substrate Selection: In the initial phase, the appropriate semiconductor substrate is chosen.
+- Create an active region for transistors : to isolate the active regions for transistors SiO2 and Si3N2 deposited. Pockets created using photoresist and lithography.
+- Nwell & Pwell formation : P-well formation involves photolithography and ion implantation of p-type Boron material into the p-substrate.N-well is formed similarly with n-type Phosphorus material.. Drive in 
+  diffusion by placing it in a high temperature furnace.
+- Gate Formationg.A polysilicon layer is deposited and photolithography techniques are applied to create NMOS and PMOS gates
+- Lightly Doped Drain (LDD) formation : LDD done to avoid hot electron effect and short channel effect.
+- Source & Drain Formation: Thin oxide layers are added to avoid channel effects during ion implantation.N+ and P+ implants are performed using Arsenic implantation and high-temperature annealing.
+- Local Interconnect Formation: Thin screen oxide is removed through etching in HF solution.Titanium deposition through sputtering is initiated. Heat treatment results in chemical reactions, producing low-    
+  resistant titanium silicon dioxide for interconnect contacts and titanium nitride for top-level connections, enabling local communication.
+- Higher Level Metal Formation: To achieve suitable metal interconnects, non-planar surface topography is addressed.Chemical Mechanical Polishing (CMP) is utilized by doping silicon oxide with Boron or   
+  Phosphorus to achieve surface planarization.TiN and blanket Tungsten layers are deposited and subjected to CMP.An aluminum (Al) layer is added and subjected to photolithography and CMP
+- Dielectric Layer Addition: Finally, a dielectric layer, typically Si3N4, is applied to safeguard the chip.
+
+
+**LAB**
+
+Cloning repository
+
+```
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+
+
+command for layout
+```
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/49e9db46-f491-4b02-940e-073314e4a465)
+
+Click on the component and type ```what``` in the tkcon window
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/26bb651d-da09-4199-a2b9-c5ecb8253425)
+
+**DRC Errors**
+
+DRC errors in magic will be highlighted with white dotted lines:
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/7e023b4b-2c28-473d-a879-029feeb593a1)
+
+To identify DRC errors select DRC find next error:
+it will be displayed on the tkcon window
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5a339793-7050-4f7f-94f2-9eefaa3f9073)
+
+**Extracting to SPICE**
+Command 
+```
+extract all
+ext2spice cthresh 0 rthresh 0
+```
+cthresh and rthresh are used to extract all parasatic capacitances.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/1bbef24c-f86b-4b54-b9e5-e70fc9edd21d)
+
+
+SPICE file 
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9665e29b-cb88-4aa6-a408-e26a520628f3)
+
+
+
+
+
+
