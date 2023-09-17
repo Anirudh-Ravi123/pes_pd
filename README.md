@@ -877,3 +877,63 @@ Clock jitter refers to the short-term variations or fluctuations in the timing o
 Clock Uncertainty:
 
 Clock uncertainty, also known as clock skew, is related to the variation in the arrival times of clock signals at different points within a digital system. It is distinct from clock jitter but can also impact system performance and timing. Clock uncertainty can arise due to factors such as clock distribution network delays, routing delays, and variations in clock path lengths.
+
+
+
+
+**Clock Tree Synthesis**
+
+After all the above steps of fixing slack violations. A a mapped.v file is generated in synthesis results. Therefore we write this netlist using write_verilog and replace the openlane generated mapped file ie., picorv32a.synthesis.v
+
+now in the openlane flow, continue with 
+```
+run_flooorplan 
+run_placement 
+run_cts
+```
+
+**Post CTS- STA Analysis**
+
+OpenSTA is an open-source static timing analysis tool that is commonly used in digital circuit design. STA is a critical step in the design and verification of digital circuits, ensuring that the circuit meets its timing requirements. OpenSTA is part of the larger OpenROAD open-source RTL-to-GDSII  flow, which provides a complete ASIC design environment.
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e456c956-fe9b-4429-9aca-d885cbb7a6e9)
+
+
+- Launch OpenRoad.
+- Read lef file from tmp folder of runs
+- Read def file from results of cts
+- Create and save the .db  file =```write_db pico_cts.db```
+- Load the .db file = ```read_db pico_cts.db```
+- Read the cts generated verilog file
+- read both the minimum and maximum liberty files.
+- set the clocks.
+- Generate timing reports
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9e95e09f-fde9-4a30-ab9a-44b461fa1dbf)
+
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9479e672-0111-4854-98b8-dfa930bb06af)
+
+
+The timing results wont meet our expectations due to the utilization of minimum and maximum library files which OpenRoad does not currently support for multi-corner optimization. Hence we do it using only typical corner lib
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/6f44ed31-8a23-4401-9fb8-6061d1a787ac)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9a337013-3870-4b29-b8ce-c33008ad409f)
+
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/7410594e-b734-4b4a-b64a-822a36e68407)
+
+
+We need to ensure that  skew is withing 10% of the clock period
+To generate report type the command ```report_clock_skew -hold```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/f67c5be4-658c-4713-842f-dbe876e75806)
+
+
+## DAY 5
