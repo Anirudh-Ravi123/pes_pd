@@ -197,7 +197,7 @@ striVe is a family of open souces tools like open PDK, open EDA ,open RTL.
 - Static Timing Analysis RC Extraction : DEF2SPEF and
 
 
-**Getting Familiar with the Open Source EDA Tools**
+## Getting Familiar with the Open Source EDA Tools
 
 Tool we will be  working on pdk variant called sky130_fd_sc_hd
 
