@@ -11,7 +11,8 @@
 ## Day 2
 - [Chip Floor Planning Considerations](#chip-floor-planning-considerations)
 - [Library Binding and Placement](#library-binding-and-placement)
-- [Cell Design and Characterization Flow](#cell-design-and-characterization-flow)
+- [Cell Design and Characterization Flows](#cell-design-and-characterization-flows)
+- [General timing characterization parameters](#general-timing-characterization-parameters)
 
 ## Day 3
 - [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
