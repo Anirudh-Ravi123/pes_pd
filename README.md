@@ -934,15 +934,8 @@ OpenSTA is an open-source static timing analysis tool that is commonly used in d
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e456c956-fe9b-4429-9aca-d885cbb7a6e9)
 
 
-- Launch OpenRoad.
-- Read lef file from tmp folder of runs
-- Read def file from results of cts
-- Create and save the .db  file =
-- Load the .db file = 
-- Read the cts generated verilog file
-- read both the minimum and maximum liberty files.
-- set the clocks.
-- Generate timing reports
+First Launch OpenRoad then we Read lef file from tmp folder of runs and the . def file from results of cts. After reading we create and save the .db  file and then we load the .db file. 
+Then we read the cts generated verilog file and  both the minimum and maximum liberty files. After read the files we set the clocks and generate timing reports.
 
 ```
 read_lef /openLANE_flow/designs/picorv32a/runs/18-09_06-26/tmp/merged.lef
@@ -960,7 +953,7 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9479e672-0111-4854-98b8-dfa930bb06af)
 
 
-The timing results wont meet our expectations due to the utilization of minimum and maximum library files which OpenRoad does not currently support for multi-corner optimization. Hence we do it using only typical corner lib
+The timing results wont meet our expectations due to the utilization of minimum and maximum library files .
 
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/da53d6a0-6f3b-419c-9fcb-f1927de18944)
@@ -982,15 +975,24 @@ We perform it again for a more accurate result
 
 ## Power Distribution Network and Routing
 
-Global and detailed routing are two essential steps in the design and manufacturing of integrated circuits (ICs), such as microchips used in electronic devices. These steps are part of the electronic design automation (EDA) process for creating semiconductor devices. 
+PDN (Power Delivery Network) routing is a crucial aspect of integrated circuit design. It involves the creation of a network of traces and components to ensure that power is distributed effectively and reliably to all parts of the electronic device. 
+
+Global and detailed routing are two essential steps in the design and manufacturing of integrated circuits. 
 After generating our clock tree network  we  generate the power distribution network gen_pdn using  OpenLANE:
 
 The PDN  will create:
 
-Power ring global for the entire core
-Power halo local to any preplaced cells
-Power straps to bring power into the center of the chip
-Power rails for the standard cells
+- Power ring global for the entire core
+A global power ring is a continuous metal ring that surrounds the entire core of the IC.It's used to distribute power (VDD) uniformly to the core logic and various functional blocks.The power ring ensures that all regions of the core receive power without significant voltage drops.
+
+- Power halo local to any preplaced cells
+A power halo is a localized power distribution network around specific preplaced cells or macroblocks on the chip.Preplaced cells are often fixed in their positions, and a power halo provides them with the necessary power connections.
+
+- Power straps to bring power into the center of the chip
+Power straps are metal traces or structures used to bring power from the periphery of the chip towards the central regions.They are essential for delivering power to the core logic and other critical areas, reducing the distance power must travel.Power straps help maintain uniform power distribution across the chip.
+
+- Power rails for the standard cells
+Power rails are metal lines that run vertically or horizontally across the chip, supplying power to standard cells .These power rails ensure that each standard cell has access to the power it needs for proper operation.
 
 ```gen_pdn```
 
@@ -1004,9 +1006,11 @@ to run the rounting we type ```run_routing```
 
 ## SPEF Extraction
 
-After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file. The SPEF extractor is not included within OpenLANE as of now.
+SPEF stands for Standard Parasitic Exchange Format, and it is a standard file format used in the semiconductor industry to represent parasitic information for integrated circuits. Parasitic elements, such as resistance and capacitance, can significantly affect the performance of a circuit, so accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.
+
+After routing has been completed interconnect parasitics can be extracted into a SPEF file. The SPEF extractor is nota part of OpenLANE as of now.
 ```
 cd ~/Desktop/work/tools/SPEFEXTRACTOR
 python3 main.py <path to merged.lef in tmp> <path to def in routing>
 ```
-The SPEF File will be generated in the location where def file is present
+
