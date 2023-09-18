@@ -1,9 +1,38 @@
 # pes_pd
 # ADVANCED PHYSICAL DESIGN USING OPENLANE/SKY130
 
+# Contents
+
+## Day 1
+- [How to Talk to Computers](#how-to-talk-to-computers)
+- [Introduction to OpenLANE and Strive chipsets](#introduction-to-openlane-and-strive-chipsets)
+- [Getiing Familiar with the Open Source EDA Tools](#getting-familiar-with-the-open-source-eda-tools)
+
+## Day 2
+- [Chip Floor Planning Considerations](#chip-floor-planning-considerations)
+- [Library Binding and Placement](#library-binding-and-placement)
+- [Cell Design and Characterization Flow](#cell-design-and-characterization-flow)
+
+## Day 3
+- [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
+- [Inception of Layout and CMOS Fabrication Process](#inception-of-layout-and-cmos-fabrication-process)
+- [Sky130 Tech File Labs](#sky130-tech-file-labs)
+
+## Day 4
+- [Timing Modelling using Delay Tables](#timing-modelling-using-delay-tables)
+- [Timing Analysis with Ideal Clocks using OpenSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+- [Clock Tree Synthesis TritonCTS and Signal Integrity](#clock-tree-synthesis-tritoncts-and-signal-integrity)
+
+## Day 5
+- [Power Distribution Network and Routing](#power-distribution-network-and-routing)
+- [SPEF Extraction](#spef-extraction)
+
+
+
+
 ## DAY 1- Inception of open-source EDA, OpenLANE and Sky130 PDK
 
-**How to talk to Computers**
+## How to talk to Computers
 **Introduction to QFN-48 Package, chip, pads, core, die and IPs**
 
 Lets us discuss this with an Aurdino board as an example.
@@ -131,7 +160,7 @@ PDK contains
 - Signoff: The Signoff stage encompasses a series of verification and validation steps
 
 
-**Introduction to OpenLANE and Strive chipsets**
+## Introduction to OpenLANE and Strive chipsets
 
 OpenLane
 OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework.esigned to automate the process of designing and fabricating digital integrated circuits. OpenLane aims to make custom ASIC design more accessible to a broader range of engineers and researchers.
