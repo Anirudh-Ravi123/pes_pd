@@ -751,22 +751,22 @@ We copy the lef file created and the sky130 library that to the src folder of pi
 
 Modify config file to include the libraries and lef file 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/471697e5-1c73-4878-8f1c-d66b3c0694e4)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/2329addb-9fba-4780-a605-de8842004aab)
 
 
 Next in OpenLANE we retrieve the 0.9 package.
 
 We type the followig commands 
 ```
-prep -design picorv32a -tag 16-09_19-58 -overwrite
+prep -design picorv32a -tag 18-09_05-15 -overwrite
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 ```
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d42c354d-f6ca-4a01-8d41-d2df8c140a02)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/b4b6cfa1-9dbb-4998-9278-c16495c8c81a)
 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/201c1736-68fa-4621-a9e4-de6fe1be819a)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d2204a1e-8391-4894-b838-034d35064f2d)
 
 
 Now we ```run_synthesis```
