@@ -945,3 +945,33 @@ We perform it again for a more accurate result
 ## DAY 5
 
 
+**Power Distribution Network and Routing**
+
+Global and detailed routing are two essential steps in the design and manufacturing of integrated circuits (ICs), such as microchips used in electronic devices. These steps are part of the electronic design automation (EDA) process for creating semiconductor devices. 
+After generating our clock tree network  we  generate the power distribution network gen_pdn using  OpenLANE:
+
+The PDN  will create:
+
+Power ring global for the entire core
+Power halo local to any preplaced cells
+Power straps to bring power into the center of the chip
+Power rails for the standard cells
+
+```gen_pdn```
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/f5bb5b94-acfe-438e-a4d8-0d0287641042)
+
+
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/1b6bb90d-cdf3-466c-9ab1-e8e68e43a8c3)
+
+
+to run the rounting we type ```run_routing```
+
+**SPEF Extraction**
+
+After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file. The SPEF extractor is not included within OpenLANE as of now.
+```
+cd ~/Desktop/work/tools/SPEFEXTRACTOR
+python3 main.py <path to merged.lef in tmp> <path to def in routing>
+```
+The SPEF File will be generated in the location where def file is present
