@@ -263,7 +263,7 @@ Netlist is generated in the runs folder
 
 ##  DAY 2 - Good floorplan vs bad floorplan and introduction to library cells
 
-**Chip Floor planning considerations**
+## Chip Floor planning considerations
 
 -  Define Width and height of core and die:
   The die refers to the entire semiconductor chip, including the core, I/O pads, and any additional features.The core refers to the central area of the chip where most of the active circuitry resides. It includes components like the CPU, GPU, memory, and other logic.
@@ -333,7 +333,7 @@ Standard cells that are used in the design
 
 
 
-**Library Binding and Placement**
+## Library Binding and Placement
 
 
 **Netlist binding and initial place design**
@@ -397,7 +397,7 @@ On zooming in we can see the placement of the standard cells
 
 
 
-**Cell design and characterization flows**
+## Cell design and characterization flows
 
 **Inputs for cell design flow**
 
@@ -419,7 +419,7 @@ Read in the models and tech files and generate extracted spice Netlist. Read the
 
 
 
-**General timing characterization parameters**
+## General timing characterization parameters
 
 **Timing threshold definitions**
 
