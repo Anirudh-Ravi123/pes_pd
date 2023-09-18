@@ -995,11 +995,5 @@ to run the rounting we type ```run_routing```
 
 ## SPEF Extraction
 
-SPEF stands for Standard Parasitic Exchange Format, and it is a standard file format used in the semiconductor industry to represent parasitic information for integrated circuits. Parasitic elements, such as resistance and capacitance, can significantly affect the performance of a circuit, so accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.
-
-After routing has been completed interconnect parasitics can be extracted into a SPEF file. The SPEF extractor is nota part of OpenLANE as of now.
-```
-cd ~/Desktop/work/tools/SPEFEXTRACTOR
-python3 main.py <path to merged.lef in tmp> <path to def in routing>
-```
+SPEF stands for Standard Parasitic Exchange Format, and it is a standard file format used in the semiconductor industry to represent parasitic information for integrated circuits. Parasitic elements, such as resistance and capacitance, can significantly affect the performance of a circuit, so accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.After routing has been completed interconnect parasitics can be extracted into a SPEF file. The SPEF extractor is nota part of OpenLANE as of now.
 
