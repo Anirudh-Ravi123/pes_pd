@@ -788,7 +788,7 @@ Ways to fix slack
  - Enalbed CELL_SIZING
  - Enabled SYNTH_STRATEGY with parameter as DELAY 1
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/6cbde5c3-5b7b-4a76-88e4-2a5cf9f4c2f5)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/72a18623-aee6-4598-a80e-c8259752978e)
 
 Slack still isnt in the required range.
 
