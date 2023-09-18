@@ -731,7 +731,7 @@ save sky130_vsdinv.mag
 Now in the terminal we type 
 
 ```
- magic -T sky130A.tch sky130_vsdinv.mag
+ magic -T sky130A.tech sky130_vsdinv.mag
 lef write
 ```
 
