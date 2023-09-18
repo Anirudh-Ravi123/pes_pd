@@ -931,7 +931,7 @@ read_lef /openLANE_flow/designs/picorv32a/runs/18-09_06-26/tmp/merged.lef
 read_def /openLANE_flow/designs/picorv32a/runs/18-09_06-26/results/cts/picorv32a.cts.def
 write_db pico_cts.db
 read_db pico_cts.db
-read_verilog /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/synthesis/picorv32a.synthesis_cts.v
+read_verilog /openLANE_flow/designs/picorv32a/runs/18-09_06-26/results/synthesis/picorv32a.synthesis_cts.v
 read_liberty -max $::env(LIB_SLOWEST)
 read_liberty -max $::env(LIB_FASTEST)
 set_propagated_clock [all_clocks]
