@@ -820,22 +820,11 @@ Ways to fix slack
  - Enalbed CELL_SIZING
  - Enabled SYNTH_STRATEGY with parameter as DELAY 1
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/72a18623-aee6-4598-a80e-c8259752978e)
-
-Slack still isnt in the required range.
-
-The sdc file used is my_base.sdc defined in pre_sta.conf using the command sta pre_sta.conf
-
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/f57ba8a6-fc74-455b-b323-017aeb6e46a6)
-
-The delay is high when the fanout is high. Therefore we can re-run synthesis by changing the value of SYNTH_MAX_FANOUT variable
+The delay is high when the fanout is high we can re-run synthesiwith different values of SYNTH_MAX_FANOUT variable
 
 2.Enable cell buffering
 
 3.Perform manual cell replacement on our WNS path with the OpenSTA tool
-Net is driving most outputs and replace the driver cell with larger form of its own kind
-
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/de2cca82-aa2c-4d6d-8e1a-52864c2bba9e)
 
 4.Optimize the fanout value with OpenLANE tool
 
