@@ -980,7 +980,7 @@ We perform it again for a more accurate result
 ## DAY 5
 
 
-**Power Distribution Network and Routing**
+## Power Distribution Network and Routing
 
 Global and detailed routing are two essential steps in the design and manufacturing of integrated circuits (ICs), such as microchips used in electronic devices. These steps are part of the electronic design automation (EDA) process for creating semiconductor devices. 
 After generating our clock tree network  we  generate the power distribution network gen_pdn using  OpenLANE:
@@ -1002,7 +1002,7 @@ Power rails for the standard cells
 
 to run the rounting we type ```run_routing```
 
-**SPEF Extraction**
+## SPEF Extraction
 
 After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file. The SPEF extractor is not included within OpenLANE as of now.
 ```
