@@ -692,7 +692,7 @@ Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130fd
 Now we open the track.info file
 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/d9cd7ab7-329c-47e1-ad71-aa580ae6fc04)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/08bb1a3d-c41e-405e-b960-d3fe9323b8a9)
 
 - The tracks.info file is used during routing.
 - Routes are the metal traces.
