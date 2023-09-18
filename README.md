@@ -451,7 +451,7 @@ Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 ## DAY 3 - Design library cell using Magic Layout and ngspice characterization
 
-## Labs for CMOS inverter ngspice simulations
+## Labs for  inverter ngspice simulations
 
 IO Placer revision
 PnR is a iterative flow and hence, we can make changes to the environment variables when required.
@@ -490,7 +490,7 @@ To enable efficient description of the varying waveforms a single parameter call
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/93ea6940-f72d-4181-8d61-45bb83130fd3)
 
 
-## Inception of Layout of CMOS fabrication process
+## Inception of Layout and  CMOS fabrication process
 
 **16 mask CMOS process**
 
