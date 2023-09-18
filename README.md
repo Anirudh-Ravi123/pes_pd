@@ -902,16 +902,24 @@ OpenSTA is an open-source static timing analysis tool that is commonly used in d
 - Launch OpenRoad.
 - Read lef file from tmp folder of runs
 - Read def file from results of cts
-- Create and save the .db  file =```write_db pico_cts.db```
-- Load the .db file = ```read_db pico_cts.db```
+- Create and save the .db  file =
+- Load the .db file = 
 - Read the cts generated verilog file
 - read both the minimum and maximum liberty files.
 - set the clocks.
 - Generate timing reports
 
-
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9e95e09f-fde9-4a30-ab9a-44b461fa1dbf)
-
+```
+read_lef /openLANE_flow/designs/picorv32a/runs/18-09_06-26/tmp/merged.lef
+read_def /openLANE_flow/designs/picorv32a/runs/18-09_06-26/results/cts/picorv32a.cts.def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -max $::env(LIB_SLOWEST)
+read_liberty -max $::env(LIB_FASTEST)
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
 
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9479e672-0111-4854-98b8-dfa930bb06af)
@@ -920,20 +928,20 @@ OpenSTA is an open-source static timing analysis tool that is commonly used in d
 The timing results wont meet our expectations due to the utilization of minimum and maximum library files which OpenRoad does not currently support for multi-corner optimization. Hence we do it using only typical corner lib
 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/6f44ed31-8a23-4401-9fb8-6061d1a787ac)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/da53d6a0-6f3b-419c-9fcb-f1927de18944)
 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9a337013-3870-4b29-b8ce-c33008ad409f)
+We perform it again for a more accurate result
 
 
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/eccaea84-8690-4d00-aa27-cdb1da5f736b)
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/7410594e-b734-4b4a-b64a-822a36e68407)
 
+`Final report 
 
-We need to ensure that  skew is withing 10% of the clock period
-To generate report type the command ```report_clock_skew -hold```
-
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/f67c5be4-658c-4713-842f-dbe876e75806)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/efc58ed7-8ef6-490b-9bbe-1c467897539f)
 
 
 ## DAY 5
+
+
