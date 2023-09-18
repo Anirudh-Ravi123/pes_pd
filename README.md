@@ -924,6 +924,9 @@ run_placement
 run_cts
 ```
 
+## Clock Tree Synthesis TritonCTS and Signal Integrity
+
+
 **Post CTS- STA Analysis**
 
 OpenSTA is an open-source static timing analysis tool that is commonly used in digital circuit design. STA is a critical step in the design and verification of digital circuits, ensuring that the circuit meets its timing requirements. OpenSTA is part of the larger OpenROAD open-source RTL-to-GDSII  flow, which provides a complete ASIC design environment.
