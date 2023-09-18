@@ -939,16 +939,14 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 ```
 
 
-![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/9479e672-0111-4854-98b8-dfa930bb06af)
+![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/e30a6d6a-98cd-440a-a9f1-93fe49a60b0b)
 
-
-The timing results wont meet our expectations due to the utilization of minimum and maximum library files .
 
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/da53d6a0-6f3b-419c-9fcb-f1927de18944)
 
 
-We perform it again for a more accurate result
+We repeat the steps to get results with higher accuracy 
 
 
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/eccaea84-8690-4d00-aa27-cdb1da5f736b)
