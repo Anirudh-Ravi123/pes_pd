@@ -574,6 +574,12 @@ plot y vs time a
 ![image](https://github.com/Anirudh-Ravi123/pes_pd/assets/142154804/5b1f8fb1-24b1-4ae9-bb40-cd9ceffded75)
 
 
+Rise Transition : 0.0395ns
+Fall transition : 0.0282ns
+Cell Rise delay : 0.03598ns
+Cell fall delay : 0.0483ns
+
+
 ## Sky130 Tech File Labs
 
 **Introduction to Magic tool options and DRC rules**
